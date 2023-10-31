@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/extensions */
@@ -16,7 +17,7 @@ import NotFoundError from './validations/NotFoundError.js';
 import auth from './middleware/auth.js';
 
 const {
-  PORT = 3001,
+  PORT = 3000,
   MONGO_URL = 'mongodb://127.0.0.1:27017/mestodb',
 } = process.env;
 
@@ -31,6 +32,11 @@ app.use(cors({
   maxAge: 3600,
 }));
 app.use(requestLogger);
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 app.use(authRouter);
 app.use(auth);
 app.use(cardsRouter);

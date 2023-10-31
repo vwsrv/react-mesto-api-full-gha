@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
   },
   about: {
     type: String,
-    default: 'Исследователь океана',
+    default: 'Исследователь',
     minlength: [2, 'Минимальная длина - 2 сивмола'],
     maxlength: [30, 'Максимальная длина - 40 символов'],
   },
