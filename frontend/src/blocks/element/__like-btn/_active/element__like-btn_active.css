@@ -1,0 +1,20 @@
+.element__like-btn_active {
+    background-image: url("../../../../images/like__black.svg");
+    padding-left: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    border: 0;
+    border-radius: 0;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    min-height: 19px;
+    min-width: 22px;
+    padding: 0;
+}
+
+.element__like-btn_active:hover {
+    background-image: url("../../../../images/like__black.svg");
+    opacity: .6;
+}
+

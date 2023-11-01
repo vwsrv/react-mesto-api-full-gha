@@ -1,0 +1,28 @@
+.profile__button-edit {
+    align-self: center;
+    min-width: 24px;
+    min-height: 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    background-color: #000000;
+    background-image: url("../../../images/Vector_pencil.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #FFFFFF;
+    padding: 0;
+}
+
+.profile__button-edit:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 320px) {
+    .profile__button-edit {
+        min-width: 18px;
+        min-height: 18px;
+        background-size: 7.5px;
+    }
+}

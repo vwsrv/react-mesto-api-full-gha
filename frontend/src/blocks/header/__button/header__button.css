@@ -1,0 +1,18 @@
+.header__button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    color: #A9A9A9;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    background: 0;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header__button:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}

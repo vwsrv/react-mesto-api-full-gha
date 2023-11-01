@@ -1,0 +1,4 @@
+.popup__container-info {
+    flex-direction: column;
+    align-content: center;
+}

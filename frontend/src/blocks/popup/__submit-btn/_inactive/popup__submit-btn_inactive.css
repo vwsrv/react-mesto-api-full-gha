@@ -1,0 +1,12 @@
+.popup__submit-btn_inactive {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: white;
+    color: black;
+    height: 50px;
+    padding: 0;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

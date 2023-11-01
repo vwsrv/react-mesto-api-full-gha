@@ -1,0 +1,15 @@
+.elements {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 282px);
+    margin: 0 auto 67px;
+    padding: 0;
+    gap: 20px 17px;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 920px) {
+    .elements {
+        justify-content: center;
+        margin: 0 auto 48px;
+    }
+}

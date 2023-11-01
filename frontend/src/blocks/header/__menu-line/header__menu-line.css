@@ -1,0 +1,39 @@
+@media screen and (max-width: 560px) {
+    .header__menu-line {
+        display: block;
+        margin: 0;
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        transition: 0.2s;
+        background-color: white;
+        border-radius: 30px;
+    }
+
+    .header__menu-line:nth-child(1) {
+        right: 4px;
+        top: 5px;
+    }
+
+    .header__menu-line:nth-child(2) {
+        right: 4px;
+        top: 14px
+    }
+
+    .header__menu-line:nth-child(3) {
+        right: 4px;
+        top: 23px
+    }
+
+    .header__menu_active .header__menu-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .header__menu_active .header__menu-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .header__menu_active .header__menu-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}

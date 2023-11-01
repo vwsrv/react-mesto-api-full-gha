@@ -1,0 +1,21 @@
+.header__menu {
+  margin: 0 30px 0 0;
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.4s ease;
+}
+
+.header__menu:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 561px) {
+  .header__menu {
+    display: block;
+  }
+}

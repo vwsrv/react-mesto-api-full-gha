@@ -1,0 +1,11 @@
+.element__image {
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    grid-column: span 2;
+    width: 282px;
+    height: 282px;
+    box-sizing: border-box;
+    object-fit: cover;
+    display: block;
+}

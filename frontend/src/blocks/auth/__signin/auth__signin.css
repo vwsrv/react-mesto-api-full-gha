@@ -1,0 +1,9 @@
+.auth__signin {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin: 15px auto 0;
+    padding: 0;
+}
