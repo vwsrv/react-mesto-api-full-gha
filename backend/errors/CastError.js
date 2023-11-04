@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import { STATUS } from '../utils/constants.js';
 
 export default class CastError extends Error {

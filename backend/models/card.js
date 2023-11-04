@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import mongoose from 'mongoose';
 import validate from 'validator';
 

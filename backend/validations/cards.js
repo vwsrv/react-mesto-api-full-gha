@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import Joi from 'joi';
 import { celebrate } from 'celebrate';
 import { urlPattern } from '../utils/constants.js';

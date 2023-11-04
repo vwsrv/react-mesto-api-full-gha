@@ -1,8 +1,9 @@
-/* eslint-disable import/extensions */
 import User from '../models/user.js';
-import AuthError from '../validations/AuthError.js';
-import NotFoundError from '../validations/NotFoundError.js';
+import AuthError from '../errors/AuthError.js';
+import NotFoundError from '../errors/NotFoundError.js';
 import { STATUS } from '../utils/constants.js';
+import CastError from '../errors/CastError.js';
+import ValidationError from '../errors/ValidationError.js';
 
 export const getUsers = (req, res, next) => {
   User.find({})
@@ -27,7 +28,12 @@ export const getUserById = (req, res, next) => {
     .then((data) => {
       res.status(STATUS.OK).send(data);
     })
-    .catch(next);
+    .catch((err) => {
+      if (err.name === 'CastError') {
+        return next(new CastError('Переданы некорретные данные для получения информации о пользователе'));
+      }
+      return next(err);
+    });
 };
 
 export const updateUserInfo = (req, res, next) => {
@@ -44,7 +50,12 @@ export const updateUserInfo = (req, res, next) => {
     .then((updatedUserInfo) => {
       res.status(STATUS.OK).send(updatedUserInfo);
     })
-    .catch(next);
+    .catch((err) => {
+      if (err.name === 'ValidationError') {
+        return next(new ValidationError('Переданы некорретные данные для обновления информации о пользователе'));
+      }
+      return next(err);
+    });
 };
 
 export const updateUserAvatar = (req, res, next) => {
@@ -56,5 +67,10 @@ export const updateUserAvatar = (req, res, next) => {
     .then((updatedAvatar) => {
       res.status(STATUS.OK).send(updatedAvatar);
     })
-    .catch(next);
+    .catch((err) => {
+      if (err.name === 'ValidationError') {
+        return next(new ValidationError('Переданы некорретные данные для обновления аватара пользователя'));
+      }
+      return next(err);
+    });
 };

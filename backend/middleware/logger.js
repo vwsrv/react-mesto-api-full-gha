@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import winston from 'winston';
 import expressWinston from 'express-winston';
 

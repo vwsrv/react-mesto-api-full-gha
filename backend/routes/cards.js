@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import { Router } from 'express';
 import {
   deleteCard, createCard, getCards, addLikeCard, dislikeCard,

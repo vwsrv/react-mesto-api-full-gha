@@ -1,9 +1,9 @@
-/* eslint-disable import/extensions */
 import bcrypt from 'bcryptjs';
 import User from '../models/user.js';
 import generateToken from '../utils/jwt.js';
-import AuthError from '../validations/AuthError.js';
-import AlreadyExists from '../validations/AlreadyExists.js';
+import AuthError from '../errors/AuthError.js';
+import AlreadyExists from '../errors/AlreadyExists.js';
+import ValidationError from '../errors/ValidationError.js';
 import { STATUS } from '../utils/constants.js';
 
 export const loginUser = (req, res, next) => {
@@ -45,6 +45,9 @@ export const createUser = (req, res, next) => {
       });
     })
     .catch((err) => {
+      if (err.name === 'ValidationError') {
+        return next(new ValidationError('Переданы некорректные данные для создания пользователя.'));
+      }
       if (err.code === 11000) {
         return next(new AlreadyExists('Пользователь с таким email уже зарегистрирован'));
       }

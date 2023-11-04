@@ -1,7 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/extensions */
 import express, { json } from 'express';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
@@ -13,7 +9,7 @@ import usersRouter from './routes/users.js';
 import cardsRouter from './routes/cards.js';
 import authRouter from './routes/auth.js';
 import errorHandler from './middleware/errorsHandler.js';
-import NotFoundError from './validations/NotFoundError.js';
+import NotFoundError from './errors/NotFoundError.js';
 import auth from './middleware/auth.js';
 
 const {

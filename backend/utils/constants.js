@@ -1,6 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-useless-escape */
-/* eslint-disable import/prefer-default-export */
 import { constants as HTTP_STATUS } from 'node:http2';
 
 export const urlPattern = /^https?:\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
