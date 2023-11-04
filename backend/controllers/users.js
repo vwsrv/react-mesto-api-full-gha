@@ -1,9 +1,9 @@
-import User from '../models/user.js';
-import AuthError from '../errors/AuthError.js';
-import NotFoundError from '../errors/NotFoundError.js';
-import { STATUS } from '../utils/constants.js';
-import CastError from '../errors/CastError.js';
-import ValidationError from '../errors/ValidationError.js';
+import User from '../models/user';
+import AuthError from '../errors/AuthError';
+import NotFoundError from '../errors/NotFoundError';
+import { STATUS } from '../utils/constants';
+import CastError from '../errors/CastError';
+import ValidationError from '../errors/ValidationError';
 
 export const getUsers = (req, res, next) => {
   User.find({})

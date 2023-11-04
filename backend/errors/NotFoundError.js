@@ -1,4 +1,4 @@
-import { STATUS } from '../utils/constants.js';
+import { STATUS } from '../utils/constants';
 
 export default class NotFoundError extends Error {
   constructor(message) {

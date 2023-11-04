@@ -1,4 +1,4 @@
-import { STATUS } from '../utils/constants.js';
+import { STATUS } from '../utils/constants';
 
 export default class CastError extends Error {
   constructor(message) {

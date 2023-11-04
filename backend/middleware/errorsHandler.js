@@ -1,4 +1,4 @@
-import { STATUS } from '../utils/constants.js';
+import { STATUS } from '../utils/constants';
 
 export default function errorHandler(err, req, res, next) {
   const { statusCode = STATUS.SEVER_ERR, message } = err;

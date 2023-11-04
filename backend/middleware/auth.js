@@ -1,9 +1,9 @@
 import jwt from 'jsonwebtoken';
-import AuthError from '../errors/AuthError.js';
+import AuthError from '../errors/AuthError';
 
 const { JWT_SECRET, NODE_ENV } = process.env;
 
-export default function auth(req, res, next) {
+export default function Auth(req, res, next) {
   let payload;
 
   try {
@@ -19,8 +19,7 @@ export default function auth(req, res, next) {
     next();
   } catch (err) {
     if (err.message === 'JsonWebTokenError') {
-      throw new AuthError('С токеном что-то не так.');
-    }
-    next(err);
+      return new AuthError('С токеном что-то не так.');
+    } return next(err);
   }
 }

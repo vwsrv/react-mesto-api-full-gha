@@ -1,6 +1,6 @@
 import Joi from 'joi';
 import { celebrate } from 'celebrate';
-import { urlPattern } from '../utils/constants.js';
+import { urlPattern } from '../utils/constants';
 
 export const userValidationSchema = celebrate({
   body: Joi.object().keys({
@@ -8,7 +8,7 @@ export const userValidationSchema = celebrate({
     about: Joi.string().min(2).max(30).optional(),
     avatar: Joi.string().regex(urlPattern).optional(),
     email: Joi.string().email().required(),
-    password: Joi.string().min(8).required(),
+    password: Joi.string().required(),
   }),
 });
 
