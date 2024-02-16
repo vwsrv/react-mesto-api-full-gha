@@ -35,7 +35,7 @@
 * [Contributing](#contributing)
 * [Authors](#authors)
 * [Acknowledgements](#acknowledgements)
-
+* [Figma Layout](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 ## About The Project
 
 ![Screen Shot](https://d1ka0itfguscri.cloudfront.net/AoR1/2024/02/16/09/38/cZnDQBVddPv/preview.jpg)
@@ -43,7 +43,7 @@
 This project was built using the ExpressJS and React libraries and then deployed to Ubuntu 20.04 LTS.
 Backend part: https://github.com/vwsrv/express-mesto-gha
 Frontend part: https://github.com/vwsrv/react-mesto-auth
-[Figma Layout](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+
 ## Built With
 
 <div align="center">
