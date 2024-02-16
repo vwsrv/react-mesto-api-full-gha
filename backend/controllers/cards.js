@@ -1,8 +1,8 @@
-import Card from '../models/card';
-import NotFoundError from '../errors/NotFoundError';
-import ValidationError from '../errors/ValidationError';
-import CastError from '../errors/CastError';
-import { STATUS } from '../utils/constants';
+import Card from '../models/card.js';
+import NotFoundError from '../errors/NotFoundError.js';
+import ValidationError from '../errors/ValidationError.js';
+import CastError from '../errors/CastError.js';
+import { STATUS } from '../utils/constants.js';
 
 export const getCards = (req, res, next) => {
   Card.find({})
@@ -33,8 +33,7 @@ export const deleteCard = (req, res, next) => {
         throw new ValidationError('Недостаточно прав для удаления карточки.');
       }
       Card.deleteOne(cardToDelete)
-        .then(() => res.status(STATUS.OK).send(cardToDelete))
-        .catch(next);
+        .then(() => res.status(STATUS.OK).send(cardToDelete));
     })
     .catch((err) => {
       if (err.name === 'CastError') {

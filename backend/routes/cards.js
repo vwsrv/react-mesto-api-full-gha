@@ -1,11 +1,11 @@
 import { Router } from 'express';
 import {
   deleteCard, createCard, getCards, addLikeCard, dislikeCard,
-} from '../controllers/cards';
+} from '../controllers/cards.js';
 import {
   addCardValidationSchema, cardLinkValidationSchema, deleteCardValidationSchema,
-} from '../validations/cards';
-import Auth from '../middleware/auth';
+} from '../validations/cards.js';
+import Auth from '../middleware/auth.js';
 
 const cardsRouter = Router();
 

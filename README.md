@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP 158.160.3.8
+IP 158.160.15.67
 
 Frontend https://vwssrv.nomoredomainsrocks.ru
 

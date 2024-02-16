@@ -4,13 +4,13 @@ import cookieParser from 'cookie-parser';
 import { errors } from 'celebrate';
 import cors from 'cors';
 import helmet from 'helmet';
-import { requestLogger, errorLogger } from './middleware/logger';
-import usersRouter from './routes/users';
-import cardsRouter from './routes/cards';
-import authRouter from './routes/auth';
-import errorHandler from './middleware/errorsHandler';
-import NotFoundError from './errors/NotFoundError';
-import Auth from './middleware/auth';
+import { requestLogger, errorLogger } from './middleware/logger.js';
+import usersRouter from './routes/users.js';
+import cardsRouter from './routes/cards.js';
+import authRouter from './routes/auth.js';
+import errorHandler from './middleware/errorsHandler.js';
+import NotFoundError from './errors/NotFoundError.js';
+import Auth from './middleware/auth.js';
 
 const {
   PORT = 3000,

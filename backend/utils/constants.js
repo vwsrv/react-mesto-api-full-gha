@@ -1,6 +1,6 @@
 import { constants as HTTP_STATUS } from 'node:http2';
 
-export const urlPattern = /^https?:\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
+export const urlPattern = /^https?:\/\/[a-z0-9]+([.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
 export const STATUS = {
   OK: HTTP_STATUS.HTTP_STATUS_OK, // 200
   CREATED: HTTP_STATUS.HTTP_STATUS_CREATED, // 201

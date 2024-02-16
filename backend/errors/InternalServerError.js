@@ -1,4 +1,4 @@
-import { STATUS } from '../utils/constants';
+import { STATUS } from '../utils/constants.js';
 
 export default class InternalServerError extends Error {
   constructor(message) {

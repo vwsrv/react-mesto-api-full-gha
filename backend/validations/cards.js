@@ -1,6 +1,6 @@
 import Joi from 'joi';
 import { celebrate } from 'celebrate';
-import { urlPattern } from '../utils/constants';
+import { urlPattern } from '../utils/constants.js';
 
 export const addCardValidationSchema = celebrate({
   body: Joi.object().keys({

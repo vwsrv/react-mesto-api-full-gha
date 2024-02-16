@@ -1,3 +1,5 @@
+import { BASE_URL } from "./constants";
+
 class Api {
   constructor({ baseUrl, headers, credentials }) {
     this._baseUrl = baseUrl;
@@ -87,7 +89,7 @@ class Api {
 }
 const token = localStorage.getItem('userId')
 export const api = new Api({
-  baseUrl: 'https://api.vwssrv.nomoredomainsrocks.ru',
+  baseUrl: BASE_URL,
   headers: { 
     authorization: token,
     'Content-Type': 'application/json',

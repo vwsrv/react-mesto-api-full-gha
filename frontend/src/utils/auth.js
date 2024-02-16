@@ -1,4 +1,4 @@
-const BASE_URL = 'https://api.vwssrv.nomoredomainsrocks.ru'
+import { BASE_URL } from "./constants";
 
 async function checkServerResponse(res) {
   if (res.ok) {
